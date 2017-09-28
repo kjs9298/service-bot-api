@@ -3,6 +3,8 @@ package com.chicken.bot;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
+import com.chicken.bot.echo.utils.KoreanUtils;
+
 
 
 /**
@@ -22,8 +24,12 @@ public class AppTest {
     @Test
     public void replaceText() {
     
-    	String replaceText = this.replaceWords("지수야 진솔아 지수진솔아 지수함수야~");
-    	System.out.println(replaceText);
+    	KoreanUtils utils = new KoreanUtils();
+    	
+    	String replaceText = this.replaceWords("지수야 진솔아 치킨을 먹겠니?");
+    	String resultText = utils.correctSuffix(replaceText);
+    	
+    	System.out.println(resultText);
     	
     }
     
