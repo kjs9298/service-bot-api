@@ -33,6 +33,8 @@ public class KoreanUtils {
 
 		for (String word : words) {
 			if (word.length() < 2) {
+				resultText.append(word);
+				resultText.append(" ");
 				continue;
 			
 			}
@@ -40,6 +42,8 @@ public class KoreanUtils {
 			String suffix = word.substring(word.length() - 1);
 			
 			if (hasFinalSoundMap.containsKey(suffix) == false && hasNotFinalSoundMap.containsKey(suffix) == false){
+				resultText.append(word);
+				resultText.append(" ");
 				continue;
 			
 			}
